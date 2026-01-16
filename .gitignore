@@ -1,0 +1,235 @@
+# ========================================
+# .gitignore for JavaScript Projects
+# ========================================
+
+# ----------------------------------------
+# Visual Studio / Visual Studio Code
+# ----------------------------------------
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.code-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Visual Studio Code - Local History
+.history/
+
+# ----------------------------------------
+# Node.js
+# ----------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.yarn-integrity
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# ----------------------------------------
+# Package Managers
+# ----------------------------------------
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ----------------------------------------
+# Build / Distribution
+# ----------------------------------------
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+.docusaurus/
+.serverless/
+.fusebox/
+
+# ----------------------------------------
+# Testing
+# ----------------------------------------
+coverage/
+*.lcov
+.nyc_output
+.grunt
+.tscache
+
+# Jest
+jest_results/
+__tests__/__snapshots__/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# ----------------------------------------
+# Environment Variables
+# ----------------------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# ----------------------------------------
+# IDEs and Editors
+# ----------------------------------------
+# JetBrains (WebStorm, IntelliJ IDEA)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ----------------------------------------
+# Operating System Files
+# ----------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ----------------------------------------
+# Logs
+# ----------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ----------------------------------------
+# Temporary Files
+# ----------------------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# ----------------------------------------
+# Database Files
+# ----------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# ----------------------------------------
+# Miscellaneous
+# ----------------------------------------
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ----------------------------------------
+# Project Specific (Optional - Customize)
+# ----------------------------------------
+# Uncomment if you want to ignore these
+# test-results/
+# screenshots/
+# recordings/
+
+# Keep specific files (examples)
+# !important-file.js
+# !config/production.js
