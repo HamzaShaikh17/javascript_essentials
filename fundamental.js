@@ -93,4 +93,66 @@ console.log(`Modulus : ${num1} % ${num2} = ${num1 % num2}`);
 console.log(`Exponentiation : ${num1} ** ${num2} = ${num1 ** num2}`);
 
 // Assignment Operators
+let assignmentNumber = 15;
+assignmentNumber += 5;
+console.log(`Assignment Operator (+=) : ${assignmentNumber}`);
+assignmentNumber -= 3;
+console.log(`Assignment Operator (-=) : ${assignmentNumber}`);
+assignmentNumber *= 2;
+console.log(`Assignment Operator (*=) : ${assignmentNumber}`);
+assignmentNumber /= 4;
+console.log(`Assignment Operator (/=) : ${assignmentNumber}`);
+
+// Comparison Operators
+console.log(5 == "5"); // true : loose equality -> converts types -> Do not check type
+console.log(5==="5"); // false : strict equality -> checks types too
+console.log(5 !=="5"); // true
+
+// Logical Operators
+let booleanVariable1 = true;
+let booleanVariable2 = false;
+console.log(`Logical AND : ${booleanVariable1} && ${booleanVariable2} = ${booleanVariable1 && booleanVariable2}`);
+console.log(`Logical OR : ${booleanVariable1} || ${booleanVariable2} = ${booleanVariable1 || booleanVariable2}`);
+console.log(`Logical NOT : !${booleanVariable1} = ${!booleanVariable1}`);
+
+// String Concatenation
+let greet1 = "Hello, ";
+let greet2 = "World!";
+let fullGreet = greet1 + greet2;
+console.log(`String Concatenation : ${fullGreet}`);
+
+/*-------------------Practice Exercises-------------------//
+// 1. Calculate the area of a rectangle (width * height)
+// 2. Calculate the perimeter (2 * (width + height))
+// 3. Check if a number is even (use % operator)
+// 4. Compare two numbers and log which is larger
+// 5. Use logical operators to check if a number is between 10 and 20
+*/
+
+// 1. Calculate the area of a rectangle (width * height)
+let height = 2;
+let width = 6;
+console.log(`Area of the rectangle is : ${height*width}`);
+
+// 2. Calculate the perimeter (2 * (width + height))
+console.log(`Perimeter of the rectangle is : ${2*(height + width)}`);
+
+// 3. Check if a number is even (use % operator)
+let numberToCheck = 8;
+console.log(numberToCheck % 2 === 0 ? `${numberToCheck} is even` : `${numberToCheck} is odd`);
+
+// 4. Compare two numbers and log which is larger
+let numA = 15;
+let numB = 20;
+console.log(numA >numB ? `${numA} is larger than ${numb}` : `${numB} is larger than ${numA}`);
+
+// 5. Use logical operators to check if a number is between 10 and 20
+let numberToCheckRange = 17;
+console.log(numberToCheckRange>10 && numberToCheckRange<20 ? `Yes ${numberToCheckRange} is between 10 and 20` :  ` No ${numberToCheckRange} is not in between 10 and 20`);
+
+//------------------------------------Part 3 : Strings------------------------------------//
+/*1.3 Strings
+Theory: Strings are sequences of characters. JavaScript provides many built-in methods to manipulate strings.
+*/
+
 
