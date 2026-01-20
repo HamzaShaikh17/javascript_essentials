@@ -61,9 +61,9 @@ if (hour >= 6 && hour < 12) {
 // 1. Check if a number is positive, negative, or zero
 // 2. Determine if a year is a leap year
 // 3. Check if a person is eligible to vote (age >= 18)
-// 4. Create a simple login system (username and password check)
+// 4. Create a simple login system (username and passworevend check)
 // 5. Write a program to find the largest of three numbers
-// 6. Use ternary operator to check if a number is even or odd
+// 6. Use ternary operator to check if a number is  or odd
 
 */
 
@@ -74,3 +74,31 @@ if (number > 0) {
 } else{
     console.log(`${number} is a negative integer.`);
 }
+
+// 2. Determine if a year is a leap year
+let year = 2020;
+console.log((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0) ? `${year} is a leap year` : `${year} is not a leap year`);
+
+// 3. Check if a person is eligible to vote (age >= 18)
+let voterAge = 20;
+console.log(voterAge >= 18 ? "Eligible to vote" : "Not eligible to vote");
+
+// 4. Create a simple login system (username and password check)
+let username = "user1";
+let password = "pass123";
+let inputUsername = "user1";
+let inputPassword = "pass1234";
+
+if (inputUsername === username && inputPassword === password) {
+  console.log("Login successful");
+} else {
+  console.log("Login failed");
+}
+// 5. Write a program to find the largest of three numbers
+let a = 10, b = 25, c = 15;
+console.log((a>b?a:b)>c?(a>b?a:b):c)
+
+// 6. Use ternary operator to check if a number is  or odd
+let numberTocheckEvenOdd = 9;
+console.log(numberTocheckEvenOdd % 2 == 0 ? `${numberTocheckEvenOdd} is even`: `${numberTocheckEvenOdd} is odd`);
+
