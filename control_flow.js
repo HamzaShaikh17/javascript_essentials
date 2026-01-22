@@ -102,3 +102,91 @@ console.log((a>b?a:b)>c?(a>b?a:b):c)
 let numberTocheckEvenOdd = 9;
 console.log(numberTocheckEvenOdd % 2 == 0 ? `${numberTocheckEvenOdd} is even`: `${numberTocheckEvenOdd} is odd`);
 
+//---------------------------------------2.2 Switch Statements-------------------------------------------//
+
+// Basic switch
+let day = "Thursday";
+switch (day) {
+  case "Monday":
+    console.log("Start of work week");
+    break;
+  case "Friday":
+    console.log("End of work week");
+    break;
+  case "Saturday":
+  case "Sunday":
+    console.log("Weekend!");
+    break;
+  default:
+    console.log("Midweek day");
+}
+
+// Switch with numbers
+let month = 11;
+switch (month) {
+  case 1:
+    console.log("January");
+    break;
+  case 2:
+    console.log("February");
+    break;
+  case 3:
+    console.log("March");
+    break;
+  case 11:
+    console.log("November");
+    break;
+  default:
+    console.log("Other month");
+}
+
+// Switch with expressions
+let scoreSub = 85;
+let grade;
+switch (true) {
+  case scoreSub >= 90:
+    grade = "A";
+    break;
+  case scoreSub >= 80:
+    grade = "B";
+    break;
+  case scoreSub >= 70:
+    grade = "C";
+    break;
+  default:
+    grade = "F";
+}
+console.log("Grade:", grade);
+
+//--------------------------Practical task -----------------------//
+
+// 1. Create a switch for days of the week (1-7)
+let weekDay = 5;
+switch (weekDay){
+  case 1:
+    console.log("Monday");
+    break;
+  case 2 :
+    console.log("Tuesday");
+    break;
+  case 3 :
+    console.log("Wednesday");
+    break;
+  case 4 :
+    console.log("Thursday");
+    break;
+  case 5 :
+    console.log("Friday");
+    break;
+  case 6 :
+    console.log("Saturday");
+    break;
+  case 7 :
+    console.log("Sunday");
+    break;
+}
+// 2. Create a calculator using switch (operations: +, -, *, /)
+// 3. Create a traffic light system (red, yellow, green)
+// 4. Convert numeric grades (1-5) to letter grades
+// 5. Create a season detector based on month number
+
