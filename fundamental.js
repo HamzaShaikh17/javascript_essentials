@@ -155,4 +155,62 @@ console.log(numberToCheckRange>10 && numberToCheckRange<20 ? `Yes ${numberToChec
 Theory: Strings are sequences of characters. JavaScript provides many built-in methods to manipulate strings.
 */
 
+let text = "Hello World";
 
+// Properties
+console.log(text.length);           // 11
+
+// Methods
+console.log(text.toUpperCase());    // "HELLO WORLD"
+console.log(text.toLowerCase());    // "hello world"
+console.log(text.charAt(0));        // "H"
+console.log(text.indexOf("World")); // 6
+console.log(text.includes("Hello"));// true
+console.log(text.slice(0, 5));      // "Hello"
+console.log(text.substring(6, 11)); // "World"
+console.log(text.split(" "));       // ["Hello", "World"]
+console.log(text.replace("World", "JS")); // "Hello JS"
+console.log(text.trim());           // removes whitespace from ends
+
+// Template literals (backticks)
+let name1 = "Alice";
+let age1 = 25;
+let intro = `My name is ${name1} and I am ${age1} years old.`;
+console.log(intro);
+
+// Multi-line strings
+let multiLine = `
+  This is
+  a multi-line
+  string
+`;
+console.log(multiLine)
+
+// String concatenation
+let first = "Hello";
+let second = "World";
+let combined = first + " " + second;  // "Hello World"
+
+console.log(combined);
+
+//---------------------------------Practical Task--------------------------------//
+
+// 1. Create a string with your full name
+let fullName = 'Hamza Shaikh';
+console.log(`${fullName} : This is my Full Name`);
+// 2. Convert it to uppercase and lowercase
+console.log(fullName.toLowerCase());
+console.log(fullName.toUpperCase());
+// 3. Extract your first name using slice()
+console.log(fullName.slice(0,5));
+// 4. Check if your name contains the letter 'a'
+console.log(fullName.includes('a'));
+// 5. Split your name into an array of characters
+console.log(fullName.split(' '));
+// 6. Create a template literal with 3 variables
+let firstVar = `Hamza Shaikh`;
+let secondVar = `AI Engineer`;
+let thirdVar = `Full Stack Engineer`;
+console.log(`${firstVar} is an ${secondVar} who is trying hard to become ${thirdVar}`);
+// 7. Replace a word in a sentence
+console.log(fullName.replace('Hamza','Sultana'));
