@@ -214,3 +214,16 @@ let thirdVar = `Full Stack Engineer`;
 console.log(`${firstVar} is an ${secondVar} who is trying hard to become ${thirdVar}`);
 // 7. Replace a word in a sentence
 console.log(fullName.replace('Hamza','Sultana'));
+
+//------------------------------------Arrays-------------------------------------------------//
+
+// Creating arrays
+let fruits = ["apple", "banana", "orange"];
+let numbers = [1, 2, 3, 4, 5];
+let mixed = [1, "hello", true, null];
+let empty = [];
+
+// Accessing elements
+console.log(fruits[0]);        // "apple"
+console.log(fruits[2]);        // "orange"
+console.log(fruits.length);    // 3
