@@ -227,3 +227,122 @@ let empty = [];
 console.log(fruits[0]);        // "apple"
 console.log(fruits[2]);        // "orange"
 console.log(fruits.length);    // 3
+
+// Modifying arrays
+fruits[1] = "grape";           // Change element
+fruits.push("mango");          // Add to end
+console.log(`${fruits} Array after pushing mango to it`)
+
+fruits.unshift("strawberry");  // Add to beginning
+console.log(`${fruits} Array after pushing strawberry to beginning`)
+
+let last = fruits.pop();       // Remove from end
+console.log(`${last} Popped element from fruits`)
+
+let firstElement = fruits.shift();    // Remove from beginning
+console.log(`${firstElement} Popped element from beginning of Array fruits`)
+
+console.log(fruits)
+
+// Array methods
+let nums = [1, 2, 3, 4, 5];
+console.log(nums.includes(3));     // true
+console.log(nums.indexOf(4));      // 3
+console.log(nums.slice(1, 3));     // [2, 3]
+console.log(nums.reverse());       // [5, 4, 3, 2, 1]
+console.log(nums.join("-"));       // "5-4-3-2-1"
+
+// Combining arrays
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+let combinedArray = arr1.concat(arr2);  // [1, 2, 3, 4]
+console.log(combinedArray)
+let spread = [...arr1, ...arr2];   // [1, 2, 3, 4]
+console.log(spread)
+
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+console.log(matrix[1][1]); // 5
+
+//-------------------------------------------Practice Array----------------------------------//
+// 1. Create an array of your 5 favorite movies
+movies = ["Avengers", "Captain America", "Doctor Strange", "Black Panther", "Dead Pool"];
+console.log(movies);
+// 2. Add a new movie to the end
+movies.push("Hulk");
+console.log(movies);
+// 3. Remove the first movie
+movies.shift();
+console.log(movies)
+// 4. Find the index of a specific movie
+movies.indexOf("Hulk");
+console.log(movies.indexOf("Hulk"));
+// 5. Create a new array with only the first 3 movies
+let firstThreeMovies = movies.slice(0,3);
+console.log(firstThreeMovies);
+// 6. Reverse the array
+console.log(movies.reverse());
+// 7. Join all movies into a string separated by commas
+console.log(movies.join("-"))
+// 8. Create a 2D array representing a tic-tac-toe board
+ticTacToe_Board = [[11,12,13],
+                   [21,22,23],
+                   [31,32,33]];
+console.log(ticTacToe_Board);
+/*
+Looking at your solution, I can see you're trying to use numbers to identify positions, but this won't work well for an actual tic-tac-toe game. Here's why and what's better:
+
+## Judging Your Solution ❌
+
+Your approach has a fundamental problem: **you're storing position identifiers instead of the game state**. In tic-tac-toe, each cell needs to store whether it's empty, has an X, or has an O - not its coordinate position.
+
+## Better Ways ✅
+
+### **Option 1: Strings (Most Common & Readable)**
+```javascript
+const board = [
+  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+// During gameplay:
+board[0][0] = 'X';
+board[1][1] = 'O';
+// Easy to check: if (board[0][0] === 'X') ...
+```
+
+### **Option 2: Null for Empty Cells**
+```javascript
+const board = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null]
+];
+
+board[0][0] = 'X';
+board[1][1] = 'O';
+```
+
+### **Option 3: Numbers (For AI/Algorithm Work)**
+```javascript
+const board = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
+// 0 = empty, 1 = X, -1 = O (useful for minimax algorithm)
+```
+
+## Why Option 1 is Best
+
+- **Clear & readable**: `'X'` and `'O'` are self-documenting
+- **Easy conditionals**: `if (cell === 'X')` is intuitive
+- **Simple display**: Can directly render the strings in UI
+- **Type safety**: Empty string `''` is clearly "empty"
+
+**Recommendation**: Use empty strings for a real game!
+*/
