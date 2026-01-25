@@ -346,3 +346,123 @@ const board = [
 
 **Recommendation**: Use empty strings for a real game!
 */
+
+//-----------------------------------Objects--------------------------------//
+
+// Creating objects
+let person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  isStudent: false,
+  hobbies: ["reading", "coding", "gaming"]
+};
+console.log(`${person} is the person pbject`);
+console.log(person);
+
+// Accessing properties
+console.log(person.firstName);        // "John" (dot notation)
+console.log(person["lastName"]);      // "Doe" (bracket notation)
+
+// Modifying properties
+person.age = 31;
+person.city = "New York";             // Add new property
+delete person.isStudent;              // Remove property
+
+console.log(person);
+
+// Nested objects
+let user = {
+  name: "Alice",
+  address: {
+    street: "123 Main St",
+    city: "Boston",
+    zip: "02101"
+  },
+  contact: {
+    email: "alice@example.com",
+    phone: "555-1234"
+  }
+};
+console.log(user.address.city);       // "Boston"
+
+// Object methods
+let calculator = {
+  value: 0,
+  add: function(num) {
+    this.value += num;
+    return this.value;
+  },
+  subtract: function(num) {
+    this.value -= num;
+    return this.value;
+  },
+  reset: function() {
+    this.value = 0;
+  }
+};
+console.log(calculator.add(5));      // 5
+console.log(calculator.add(3));      // 8
+console.log(calculator.subtract(2)); // 6
+
+// Checking properties
+console.log("name" in user);              // true
+console.log(user.hasOwnProperty("name")); // true
+
+// Getting keys and values
+console.log(Object.keys(person));         // ["firstName", "lastName", "age", ...]
+console.log(Object.values(person));       // ["John", "Doe", 31, ...]
+console.log(Object.entries(person));      // [["firstName", "John"], ...]
+
+//---------------------------------------Practice----------------------------------------//
+
+// 1. Create an object representing a car with:
+//    - brand, model, year, color, isElectric
+let carProperty = {
+    brand : "Tesla",
+    model : "Model-Y",
+    year : 2024,
+    color : "Grey",
+    isElectric : true
+};
+console.log(carProperty);
+// 2. Add a method that returns a description of the car
+function carDescription(carObject){
+    return `Car is the latest ${carObject.brand} of model ${carObject.model}. It was introduced in the first time in the year of ${carObject.year}. It's color is ${carObject.color} and fully electronic`;
+};
+console.log(carDescription(carProperty));
+
+/*
+-------------------------------Better Solution------------------------
+const car = {
+    brand: 'Tesla',
+    model: 'Model 3',
+    year: 2024,
+    color: 'red',
+    isElectric: true,
+    
+    getDescription() {
+        return `This ${this.year} ${this.brand} ${this.model} comes in ${this.color}.`;
+    }
+};
+
+console.log(car.getDescription());
+*/
+carProperty.getDescription = function() {
+        return `This ${this.year} ${this.brand} ${this.model} comes in ${this.color}.`;
+    };
+console.log(carProperty.getDescription());
+// 3. Create a nested object for the car's engine (type, horsepower)
+carProperty.engine = {
+    type : "Electrical Engine",
+    horsepower : 500
+};
+console.log(carProperty.engine);
+// 4. Access and modify properties using both notations
+carProperty.engine.type= "Electric Car";
+carProperty.engine["horsepower"] = 600
+console.log(carProperty)
+// 5. Get all keys and values of the car object
+console.log(Object.keys(carProperty));
+console.log(Object.values(carProperty));
+// 6. Create an array of 3 car objects
