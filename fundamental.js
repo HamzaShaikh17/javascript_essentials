@@ -466,3 +466,27 @@ console.log(carProperty)
 console.log(Object.keys(carProperty));
 console.log(Object.values(carProperty));
 // 6. Create an array of 3 car objects
+let cars = [
+    {
+    brand: 'Tesla',
+    model: 'Model 3',
+    year: 2024,
+    color: 'red',
+    isElectric: true,
+    },
+    {
+    brand: 'rolls-royce',
+    model: 'Ghost Series II',
+    year: 2025,
+    color: 'blue',
+    isElectric: false,
+    },
+    {
+    brand: 'Buggati',
+    model: 'Chiron',
+    year: 2025,
+    color: 'skyblue',
+    isElectric: false,
+    }
+
+];
